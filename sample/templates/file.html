@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+    </style>
+
+    <body>
+        {% if data == 'File not found' %}
+            {{data}}
+        {% else %}
+            <table>
+                Displaying data for file {{data['name']}}
+                {% for item in data %}
+                    <tr>
+                        <td>{{item}}</td>
+                        <td>{{data[item]}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% endif %}
+    </body>
+
+</html>
+
+<!-- { {'kind': 'drive#file', 'id': '10Fvs9yCcFikA3PamHmVbirFy5jltypky', 'name': 'Document 3.txt', 'mimeType': 'text/plain'} } -->

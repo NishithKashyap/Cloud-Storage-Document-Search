@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+    </style>
+
+    <body>
+        Displaying all files info
+        <table>
+            <tr>
+                <td>Kind</td>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Mime Type</td>
+            </tr>
+            {% for item in data %}
+                <tr>
+                    <td>{{item['kind']}}</td>
+                    <td>{{item['id']}}</td>
+                    <td>{{item['name']}}</td>
+                    <td>{{item['mimeType']}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+
+</html>

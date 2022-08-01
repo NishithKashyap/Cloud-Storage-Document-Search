@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+    </style>
+
+    <body>
+      {% if data == "Word does'nt exist in any document" %}
+            {{data}}
+      {% else %}
+        <table style="width:100%">
+          <tr>
+            <th>Word</th>
+            <th>Document Name</th>
+            <th>Number of occurences</th>
+          </tr>
+          {% for item in data %}
+            <tr>
+                <td>{{item[0]}}</td>
+                <td>{{item[1]}}</td>
+                <td>{{item[2]}}</td>
+            </tr>
+          {% endfor %}
+        </table>
+      {% endif %}
+    </body>
+
+</html>
